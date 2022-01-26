@@ -1,0 +1,86 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  background: hsl(210, 36%, 96%);
+  color: var(--clr-grey-1);
+}
+.h1 {
+  line-height: 1.2;
+  color: hsl(209, 61%, 16%);
+}
+.sidebar-header {
+  color: hsl(209, 61%, 16%);
+}
+.sidebar {
+  color: hsl(210, 22%, 49%);
+  max-width: 650px;
+}
+.sidebar-bg {
+  background-color: rgba(0, 0, 0, 0.486);
+  transform: scale(1);
+  transition: all 0.3s linear;
+}
+.scale-zero {
+  transform: scale(0);
+  transition: all 0.3s linear;
+}
+.show {
+  display: block;
+}
+.submenu-top {
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid white;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.submenu-gray{
+  color:hsl(209, 28%, 39%) ;
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+.max-w-screen {
+  max-width: 1170px;
+}
+
+.w-screen-full {
+  width: 1536px;
+}
+
+.bg-pos {
+  background-position: 50%;
+  /* background-size: 100%; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.hero::before {
+  content: "";
+  background: url("./images/hero.svg");
+  position: absolute;
+  width: 100%;
+  height: 65%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+@media screen and (min-width: 768px) {
+  .hero::before {
+    background-size: contain;
+    height: 100%;
+  }
+}
